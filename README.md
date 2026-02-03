@@ -1,36 +1,71 @@
 # Credit-Card-Data-Analysis
 
 ## Objective
-The objective of this analysis is to evaluate customer spending and repayment behavior using credit card transaction data. The study focuses on identifying key insights related to customer demographics, spending habits, repayment trends, and overall profitability. Additionally, it aims to analyze customer spending patterns to enhance marketing campaigns and develop personalized offers for better engagement.
+This project focuses on analyzing credit card customer acquisition, spending, and repayment behavior using pyhton. The goal is to understand customer behavior patterns, evaluate bank profitability, and generate actionable insights related to credit risk, collections, and targeted marketing in a real-world banking scenario.
 
-## Data Overview
-The dataset consists of three key tables.
-  1. Customer Acquisition - Contains details about customers, including age, credit limit, and assigned card type.
-  2. Spending Data- Records transaction level spending details by customers.
-  3. Repayment Data - Captures repayment transactions made by customers.
-## Key Analysis & Insights
-  1. Data Cleaning & Preprocessing
-     - Replaced age values less than 18 with the mean age.
-     - Capped spend amounts exceeding limits to 50% of the assigned limit.
-     - Adjusted repayment amounts exceeding the limit to the limit value.
-  2. Exploratory Analysis
-     - Count of distinct customers in the dataset.
-     - Monthly spending and repayment trends
-     - Profitability calculation as the differnece between repayments and spending.
-     - Identification of the top 5 product types.
-     - Analysis of cities with maximum spending.
-     - Age group contributing the most to spending.
-     - Top 10 customers in terms of repayment amounts.
-     - City-wise yearly spend analysis on products, supported with graphical representation.
-## Technologies Used
-  1. Python Libraries: Pandas, NumPy, Matplotlib, Seaborn.
-  2. Data Processing: Cleaning, transformation, and aggregations.
-  3. Visualizations: Bar charts, line graphs, and other statistical plots.
+The analysis is based on a case study simulating a global bank operating across multiple cities and customer segments.
+
+## Business Objective
+The objective of this project was to analyze credit card transaction and repayment data to:
+  - Identify high-value and high-risk customer segments.
+  - Understand spending and repayment patterns across cities, age groups, and product types.
+  - Support data-driven decision-making for credit risk management and marketing strategies.
+
+## Data Description.
+The project uses three datasets.
+1. Customer Acquisition data
+   - Customer demographics(age, city, credit limit, product type)
+2. Spend Data
+   - Customer spending across categories, cities, and time periods.
+3. Repayment Data
+   - Monthly repayment amounts made by customers.
+
+## Data Cleaning & Preprocessing.
+Key data quality issues were identified and handled using Python:
+- Replaced customer age values below 18 with the average age.
+- Capped spending amounts exceeding the customer's credit limit at 50% of the limit.
+- Replaced repayment amounts exceeding the credit limit with the limit value.
+- Standardized date formats for monthly and yearly analysis.
+
+## Exploratory Data Analysis(EDA)
+Using Pandas and NumPy, the following analyses were performed.
+- Counted average customers and transaction categories.
+- Calculated average monthly spend and average monthly repayment per customer.
+- Analyzed spending behavior across cities, age groups, and product categories.
+- Identified top 5 product types and highest spending cities.
+- Determined age groups contributing the highest spending.
+- Identified top 10 customers based on repayment amount.
+
+## Profitability Analysis
+- calculated monthly profit as:
+  Monthly Repayment - Monthly Spend.
+- Applied a 2.9% monthly interest rate on positive monthly profit values.
+- Computed interest-based profit earned by the bank for each month.
+
+## Trend & Visualy Analysis:
+Visualizations were created using Matplotlib and Seaborn to highlight:
+- City-wise monthly comparison of total spending.
+- Yearly comparison of spending on air tickets.
+- Monthly spending trends across different product categories.
+- Seasonal patterns in customer spending behavior.
+
+# Key Insights
+- Certain cities consisitently contributed higher transaction volumnes and revenue.
+- Specific age groups showed higher spending behavior and repayment capacity.
+- A small set of customers contributed significatnly to overall repayments.
+- Product categories exhibited seasonal spendin patterns.
+- Profitability varied month-over-month basedon customer repayment behavior.
+
+# Tools and Technologies:
+- Programming Language: Python
+- Libraries: Pandas, NumPy, Matplotlib, Seaborn.
+- Data format : CSV
+
+# Outcome
+The project delivered a comprehensive analysis of credit card customer behavior and bank profitability. Insights fromthis analysis can support.
+- credit risk assessment and fraud monitoring.
+- customer segmentation and targeted marketing.
+- Revenue optimization and collection strategies.
 
 # Conclusion
-  This analysis provides a comprehensive view of customer spending patterns, repayment behaviours, and key profitability metrics.  The insights can help in strategic decision-making for customer engagement, credit policies, and marketing strategies.
-
-# Usage 
-  To run this analysis, execute the jupyter notebook file and ensure the required datasets are available in the specified file paths.
-
-Author: SANDE BHUVANACHANDRA YADAV.
+This project demonstrates and end-to-end analytics workflow,from data cleaning and exploratory data analysis to profitability calculation and business storytelling, closely resembling real-world financial analytics and banking use cases.
